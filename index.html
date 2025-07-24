@@ -7,75 +7,80 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <style>
     .hero {
-      background: url('header-bg.jpg') no-repeat center center/cover;
+      background: linear-gradient(to right, #2e2e2eaa, #1e1e1eaa), url('header-bg.jpg') no-repeat center center/cover;
+    }
+    .blurred {
+      backdrop-filter: blur(5px);
     }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
-  <header class="hero text-white text-center py-20 shadow-md">
-    <h1 class="text-4xl font-extrabold mb-2">David Martinez</h1>
-    <p class="text-xl font-light">Visual Artist & 3D Designer at 3DVR.tech</p>
+  <header class="hero text-white text-center py-24 shadow-md">
+    <h1 class="text-5xl font-extrabold mb-3 drop-shadow-lg">David Martinez</h1>
+    <p class="text-2xl font-light drop-shadow">Visual Artist & 3D Designer at 3DVR.tech</p>
   </header>
 
-  <main class="max-w-4xl mx-auto mt-10 bg-white rounded-xl shadow p-6">
-    <img class="w-40 h-40 rounded-full mx-auto border-4 border-white -mt-20 shadow-md object-cover" src="profile.jpg" alt="David Martinez">
+  <main class="max-w-5xl mx-auto mt-10 bg-white rounded-xl shadow-xl p-8 relative -top-12">
+    <div class="flex flex-col items-center">
+      <img class="w-40 h-40 rounded-full border-4 border-white shadow-lg object-cover -mt-20 bg-white" src="profile.jpg" alt="David Martinez">
+    </div>
 
     <section class="text-center mt-6">
-      <h2 class="text-2xl font-bold">About Me</h2>
-      <p class="mt-4 text-gray-700">
-        I'm a creative visual artist with a growing passion for 3D design, animation, and video editing. I work with the team at <a href="https://3dvr.tech" class="text-blue-600 underline" target="_blank">3DVR.tech</a> to bring ideas to life with style and motion. I love experimenting with color, motion, and composition.
+      <h2 class="text-3xl font-bold">About Me</h2>
+      <p class="mt-4 text-gray-700 text-lg max-w-2xl mx-auto">
+        I'm a creative visual artist with a passion for 3D design, animation, and video editing. I collaborate with the team at <a href="https://3dvr.tech" class="text-blue-600 underline" target="_blank">3DVR.tech</a> to bring stories to life with style, color, and motion.
       </p>
     </section>
 
-    <section class="mt-10">
-      <h2 class="text-2xl font-bold text-center">What I Do</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 text-center">
-        <div>
-          <img src="3d-icon.png" alt="3D Design" class="mx-auto w-16 mb-2">
-          <p>3D Modeling & Animation</p>
+    <section class="mt-12">
+      <h2 class="text-3xl font-bold text-center">What I Do</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-6 text-center">
+        <div class="p-4 bg-gray-50 rounded shadow hover:shadow-md transition">
+          <div class="w-16 h-16 mx-auto mb-3 bg-gray-300 rounded-full"></div>
+          <p class="text-lg font-medium">3D Modeling & Animation</p>
         </div>
-        <div>
-          <img src="design-icon.png" alt="Graphic Design" class="mx-auto w-16 mb-2">
-          <p>Graphic Design</p>
+        <div class="p-4 bg-gray-50 rounded shadow hover:shadow-md transition">
+          <div class="w-16 h-16 mx-auto mb-3 bg-gray-300 rounded-full"></div>
+          <p class="text-lg font-medium">Graphic Design</p>
         </div>
-        <div>
-          <img src="video-icon.png" alt="Video Editing" class="mx-auto w-16 mb-2">
-          <p>Video Editing & Motion Graphics</p>
+        <div class="p-4 bg-gray-50 rounded shadow hover:shadow-md transition">
+          <div class="w-16 h-16 mx-auto mb-3 bg-gray-300 rounded-full"></div>
+          <p class="text-lg font-medium">Video Editing & Motion Graphics</p>
         </div>
       </div>
     </section>
 
-    <section class="mt-10 text-center">
-      <h2 class="text-2xl font-bold">Looking for Work</h2>
-      <p class="mt-4 text-gray-700">
-        I'm currently open for part-time or freelance opportunities that allow me to build my portfolio and collaborate with creative teams. Let's make something awesome together.
+    <section class="mt-12 text-center">
+      <h2 class="text-3xl font-bold">Currently Seeking</h2>
+      <p class="mt-4 text-gray-700 text-lg max-w-xl mx-auto">
+        I'm open to part-time or freelance gigs that let me contribute creatively a few hours a day. Whether it’s a logo, animation, or social media content, I’m ready to bring your vision to life.
       </p>
     </section>
 
-    <section class="mt-10 text-center">
-      <h2 class="text-2xl font-bold">Portfolio Preview</h2>
+    <section class="mt-12 text-center">
+      <h2 class="text-3xl font-bold">Sample Work</h2>
       <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src="sample1.jpg" alt="Sample Work 1" class="rounded-lg shadow">
-        <img src="sample2.jpg" alt="Sample Work 2" class="rounded-lg shadow">
-        <img src="sample3.jpg" alt="Sample Work 3" class="rounded-lg shadow">
+        <div class="w-full h-48 bg-gray-200 rounded-lg animate-pulse"></div>
+        <div class="w-full h-48 bg-gray-200 rounded-lg animate-pulse"></div>
+        <div class="w-full h-48 bg-gray-200 rounded-lg animate-pulse"></div>
       </div>
-      <p class="mt-4 text-gray-600 italic">More coming soon!</p>
+      <p class="mt-4 text-gray-500 italic">Portfolio previews coming soon. Stay tuned!</p>
     </section>
 
-    <section class="mt-10 text-center">
-      <h2 class="text-2xl font-bold">Get In Touch</h2>
-      <p class="mt-2 text-gray-700">Email: <span class="italic">Coming Soon</span></p>
-      <p class="text-gray-700">Phone: <span class="italic">Coming Soon</span></p>
-      <div class="mt-4 space-x-4">
-        <a href="#" onclick="alert('Coming soon!')" class="text-blue-600 hover:underline">LinkedIn</a>
-        <a href="#" onclick="alert('Coming soon!')" class="text-blue-600 hover:underline">Instagram</a>
-        <a href="#" onclick="alert('Coming soon!')" class="text-blue-600 hover:underline">ArtStation</a>
+    <section class="mt-12 text-center">
+      <h2 class="text-3xl font-bold">Contact</h2>
+      <p class="mt-2 text-gray-700 text-lg">Email: <span class="italic text-gray-500">Coming Soon</span></p>
+      <p class="text-gray-700 text-lg">Phone: <span class="italic text-gray-500">Coming Soon</span></p>
+      <div class="mt-4 space-x-6">
+        <a href="#" onclick="alert('Coming soon!')" class="text-blue-600 hover:underline text-lg">LinkedIn</a>
+        <a href="#" onclick="alert('Coming soon!')" class="text-blue-600 hover:underline text-lg">Instagram</a>
+        <a href="#" onclick="alert('Coming soon!')" class="text-blue-600 hover:underline text-lg">ArtStation</a>
       </div>
     </section>
   </main>
 
-  <footer class="mt-10 bg-gray-900 text-white text-center py-6">
+  <footer class="mt-12 bg-gray-900 text-white text-center py-6">
     &copy; 2025 David Martinez | Visuals by 3DVR.tech
   </footer>
 
