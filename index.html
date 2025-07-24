@@ -1,88 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>David Martinez - Visual Artist at 3DVR.tech</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <style>
-    .hero {
-      background: linear-gradient(to right, #2e2e2eaa, #1e1e1eaa), url('header-bg.jpg') no-repeat center center/cover;
-    }
-    .blurred {
-      backdrop-filter: blur(5px);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Martinez – 3DVR.tech</title>
+    <!--
+      This document defines a modern personal profile for David Martinez.  The
+      existing site content described David primarily as a software developer.
+      This revision refocuses the narrative on his strengths as a graphic
+      designer, 3D artist and videographer.  A clean, modular layout with
+      decorative images helps convey creativity and professionalism while
+      clearly stating his skills, portfolio, availability and contact
+      information.  All text and imagery are self‑contained so it can be
+      hosted locally without external dependencies.
+    -->
+    <style>
+        /* Base styles */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hero section featuring a vibrant abstract 3D artwork */
+        .hero {
+            position: relative;
+            height: 60vh;
+            background-image: url('images/header.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        /* Semi‑transparent overlay to ensure legibility of hero text */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            margin: 0 0 0.3em;
+            font-size: 3em;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            margin: 0;
+            font-size: 1.3em;
+            font-weight: 300;
+        }
+
+        /* Main container holds all content sections */
+        .container {
+            max-width: 1000px;
+            margin: -60px auto 0;
+            padding: 40px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-top: 40px;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        /* Skill cards layout using CSS grid for responsiveness */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .skill-card strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #007BFF;
+        }
+
+        /* Portfolio image style */
+        .portfolio-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* Availability callout */
+        .availability p {
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Simple button style for future interactive elements */
+        a.button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        a.button:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #222;
+            color: #fff;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-
-  <header class="hero text-white text-center py-24 shadow-md">
-    <h1 class="text-5xl font-extrabold mb-3 drop-shadow-lg">David Martinez</h1>
-    <p class="text-2xl font-light drop-shadow">Visual Artist & 3D Designer at 3DVR.tech</p>
-  </header>
-
-  <main class="max-w-5xl mx-auto mt-10 bg-white rounded-xl shadow-xl p-8 relative -top-12">
-    <div class="flex flex-col items-center">
-      <img class="w-40 h-40 rounded-full border-4 border-white shadow-lg object-cover -mt-20 bg-white" src="profile.jpg" alt="David Martinez">
+<body>
+    <!-- Hero section with name and tagline -->
+    <div class="hero">
+        <div class="hero-overlay">
+            <h1>David Martinez</h1>
+            <p>Graphic Designer &amp; 3D Artist</p>
+        </div>
     </div>
 
-    <section class="text-center mt-6">
-      <h2 class="text-3xl font-bold">About Me</h2>
-      <p class="mt-4 text-gray-700 text-lg max-w-2xl mx-auto">
-        I'm a creative visual artist with a passion for 3D design, animation, and video editing. I collaborate with the team at <a href="https://3dvr.tech" class="text-blue-600 underline" target="_blank">3DVR.tech</a> to bring stories to life with style, color, and motion.
-      </p>
-    </section>
-
-    <section class="mt-12">
-      <h2 class="text-3xl font-bold text-center">What I Do</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-6 text-center">
-        <div class="p-4 bg-gray-50 rounded shadow hover:shadow-md transition">
-          <div class="w-16 h-16 mx-auto mb-3 bg-gray-300 rounded-full"></div>
-          <p class="text-lg font-medium">3D Modeling & Animation</p>
+    <!-- Main content container -->
+    <div class="container">
+        <!-- About section -->
+        <div class="section about">
+            <h2>About Me</h2>
+            <p>
+                I’m David Martinez, a passionate graphic designer, 3D artist and videographer based in the United States.  
+                With a background in digital art and a keen eye for detail, I craft immersive visuals and designs that tell stories.  
+                My work spans from concept art and branding to interactive installations and motion graphics.  
+                I love collaborating with forward‑thinking teams to bring imaginative ideas to life.
+            </p>
         </div>
-        <div class="p-4 bg-gray-50 rounded shadow hover:shadow-md transition">
-          <div class="w-16 h-16 mx-auto mb-3 bg-gray-300 rounded-full"></div>
-          <p class="text-lg font-medium">Graphic Design</p>
+
+        <!-- Skills section -->
+        <div class="section skills">
+            <h2>Skills &amp; Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <strong>3D Modeling &amp; Rendering</strong>
+                    Expert in modeling, sculpting and rendering realistic and stylized assets for games, film and VR.
+                </div>
+                <div class="skill-card">
+                    <strong>Graphic Design</strong>
+                    Branding, logo creation, marketing collateral and user interface graphics with a modern aesthetic.
+                </div>
+                <div class="skill-card">
+                    <strong>Motion Graphics &amp; Videography</strong>
+                    Editing, visual effects and motion design to produce engaging video content.
+                </div>
+                <div class="skill-card">
+                    <strong>Digital Sculpting</strong>
+                    Creating intricate digital sculptures for products, character design and 3D printing.
+                </div>
+                <div class="skill-card">
+                    <strong>Creative Direction</strong>
+                    Developing cohesive visual strategies and concepts for campaigns and immersive experiences.
+                </div>
+            </div>
         </div>
-        <div class="p-4 bg-gray-50 rounded shadow hover:shadow-md transition">
-          <div class="w-16 h-16 mx-auto mb-3 bg-gray-300 rounded-full"></div>
-          <p class="text-lg font-medium">Video Editing & Motion Graphics</p>
+
+        <!-- Portfolio section -->
+        <div class="section portfolio">
+            <h2>Portfolio &amp; Projects</h2>
+            <p>
+                At <a href="https://3dvr.tech" target="_blank">3DVR.tech</a>, I collaborate with a multidisciplinary team to build 
+                immersive worlds and stunning visuals.  Our work ranges from virtual reality experiences and interactive installations 
+                to digital assets for entrepreneurs and creatives.  I also undertake freelance projects, crafting branding suites 
+                and motion graphics for clients across industries.
+            </p>
+            <img src="images/portfolio.png" alt="3D art sample" class="portfolio-image">
         </div>
-      </div>
-    </section>
 
-    <section class="mt-12 text-center">
-      <h2 class="text-3xl font-bold">Currently Seeking</h2>
-      <p class="mt-4 text-gray-700 text-lg max-w-xl mx-auto">
-        I'm open to part-time or freelance gigs that let me contribute creatively a few hours a day. Whether it’s a logo, animation, or social media content, I’m ready to bring your vision to life.
-      </p>
-    </section>
+        <!-- Availability section -->
+        <div class="section availability">
+            <h2>Availability</h2>
+            <p>
+                I’m currently seeking remote opportunities where I can contribute a few hours each day.  If you’re looking 
+                for a creative professional to bring your ideas to life, let’s connect and discuss how we can work together.
+            </p>
+        </div>
 
-    <section class="mt-12 text-center">
-      <h2 class="text-3xl font-bold">Sample Work</h2>
-      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="w-full h-48 bg-gray-200 rounded-lg animate-pulse"></div>
-        <div class="w-full h-48 bg-gray-200 rounded-lg animate-pulse"></div>
-        <div class="w-full h-48 bg-gray-200 rounded-lg animate-pulse"></div>
-      </div>
-      <p class="mt-4 text-gray-500 italic">Portfolio previews coming soon. Stay tuned!</p>
-    </section>
+        <!-- Contact section -->
+        <div class="section contact">
+            <h2>Contact</h2>
+            <p>Email: <em>(coming soon)</em></p>
+            <p>Phone: <em>(coming soon)</em></p>
+        </div>
 
-    <section class="mt-12 text-center">
-      <h2 class="text-3xl font-bold">Contact</h2>
-      <p class="mt-2 text-gray-700 text-lg">Email: <span class="italic text-gray-500">Coming Soon</span></p>
-      <p class="text-gray-700 text-lg">Phone: <span class="italic text-gray-500">Coming Soon</span></p>
-      <div class="mt-4 space-x-6">
-        <a href="#" onclick="alert('Coming soon!')" class="text-blue-600 hover:underline text-lg">LinkedIn</a>
-        <a href="#" onclick="alert('Coming soon!')" class="text-blue-600 hover:underline text-lg">Instagram</a>
-        <a href="#" onclick="alert('Coming soon!')" class="text-blue-600 hover:underline text-lg">ArtStation</a>
-      </div>
-    </section>
-  </main>
+        <!-- Follow section -->
+        <div class="section follow">
+            <h2>Follow Me</h2>
+            <p>
+                Links to LinkedIn, GitHub and Twitter will be available soon.  
+                Stay tuned for updates and portfolio additions!
+            </p>
+        </div>
+    </div>
 
-  <footer class="mt-12 bg-gray-900 text-white text-center py-6">
-    &copy; 2025 David Martinez | Visuals by 3DVR.tech
-  </footer>
-
+    <footer>
+        &copy; 2025 David Martinez | 3DVR.tech | Graphic Designer &amp; 3D Artist
+    </footer>
 </body>
 </html>
